@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.foodgo.SignupController">
+   <left>
+      <AnchorPane prefHeight="493.0" prefWidth="825.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="465.0" fitWidth="824.0" layoutX="-5.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Foodgo-Photoroom.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="136.0" layoutY="86.0" prefHeight="57.0" prefWidth="156.0" text="FoodGo" textFill="#ff4e00">
+               <font>
+                  <Font name="Pardell" size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="151.0" layoutY="115.0" prefHeight="37.0" prefWidth="155.0" text="Every Bite Matters❤" />
+            <TextField fx:id="nameField" layoutX="116.0" layoutY="195.0" prefHeight="32.0" prefWidth="172.0" promptText="👶 Enter Full Name">
+               <effect>
+                  <ColorAdjust>
+                     <input>
+                        <DropShadow height="10.0" radius="4.5" width="10.0">
+                           <color>
+                              <Color red="0.9649122953414917" green="0.5762670636177063" blue="0.10125622898340225" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </ColorAdjust>
+               </effect>
+            </TextField>
+            <TextField fx:id="emailField" layoutX="116.0" layoutY="245.0" prefHeight="32.0" prefWidth="172.0" promptText="📩  Enter Email address">
+               <effect>
+                  <ColorAdjust>
+                     <input>
+                        <DropShadow height="10.0" radius="4.5" width="10.0">
+                           <color>
+                              <Color red="0.9649122953414917" green="0.5762670636177063" blue="0.10125622898340225" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </ColorAdjust>
+               </effect>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="115.0" layoutY="292.0" prefHeight="31.0" prefWidth="175.0" promptText="🔒 Password">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="15.0" radius="8.25" width="20.0">
+                     <color>
+                        <Color red="0.9210526347160339" green="0.5539107918739319" blue="0.10518193989992142" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </PasswordField>
+            <Button layoutX="175.0" layoutY="342.0" mnemonicParsing="false" onAction="#signupEvent" text="Sign up" textAlignment="CENTER" />
+            <Label layoutX="138.0" layoutY="382.0" prefHeight="16.0" prefWidth="90.0" text="Already have an account?">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Label>
+            <Label layoutX="139.0" layoutY="134.0" prefHeight="52.0" prefWidth="150.0" text="Create Account">
+               <font>
+                  <Font name="Helvetica" size="20.0" />
+               </font>
+            </Label>
+            <Label accessibleRole="BUTTON" layoutX="236.0" layoutY="382.0" onMouseClicked="#goToSignin" text="Sign in" textFill="#e06209" underline="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bd.edu.seu.foodgo.DashboardController">
+
+   <!-- TOP BAR -->
+   <top>
+      <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-background-color:#FF6B35; -fx-padding:15;">
+         <children>
+
+            <Label text="🍔 FoodGo" textFill="WHITE">
+               <font>
+                  <Font size="28"/>
+               </font>
+            </Label>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Label fx:id="balanceLabel"
+                   text="Balance : ৳1000"
+                   textFill="WHITE">
+               <font>
+                  <Font size="18"/>
+               </font>
+            </Label>
+
+            <Button text="Logout"
+                    onAction="#logoutButtonEvent"/>
+
+         </children>
+      </HBox>
+   </top>
+
+   <!-- CENTER -->
+   <center>
+
+      <ScrollPane fitToWidth="true">
+
+         <content>
+
+            <VBox spacing="20" padding="20">
+
+               <!-- BURGER -->
+
+               <Label text="🍔 Burgers">
+                  <font>
+                     <Font size="22"/>
+                  </font>
+               </Label>
+
+               <HBox spacing="15">
+                  <CheckBox fx:id="miniBurger" text="Mini Burger"/>
+                  <Label text="Qty"/>
+                  <Slider fx:id="miniSlider" min="0" max="10" value="0"/>
+               </HBox>
+
+               <HBox spacing="15">
+                  <CheckBox fx:id="beefBurger" text="Beef Burger"/>
+                  <Label text="Qty"/>
+                  <Slider fx:id="beefSlider" min="0" max="10" value="0"/>
+               </HBox>
+
+               <HBox spacing="15">
+                  <CheckBox fx:id="nagaBurger" text="Naga Burger"/>
+                  <Label text="Qty"/>
+                  <Slider fx:id="nagaSlider" min="0" max="10" value="0"/>
+               </HBox>
+
+               <!-- PIZZA -->
+
+               <Separator/>
+
+               <Label text="🍕 Pizza">
+                  <font>
+                     <Font size="22"/>
+                  </font>
+               </Label>
+
+               <HBox spacing="15">
+                  <CheckBox fx:id="cheesePizza" text="Cheese Pizza"/>
+                  <Label text="Qty"/>
+                  <Slider fx:id="cheeseSlider" min="0" max="10" value="0"/>
+               </HBox>
+
+               <HBox spacing="15">
+                  <CheckBox fx:id="beefPizza" text="Beef Pizza"/>
+                  <Label text="Qty"/>
+                  <Slider fx:id="beefPizzaSlider" min="0" max="10" value="0"/>
+               </HBox>
+
+               <!-- DRINKS -->
+
+               <Separator/>
+
+               <Label text="🥤 Drinks">
+                  <font>
+                     <Font size="22"/>
+                  </font>
+               </Label>
+
+               <HBox spacing="15">
+                  <CheckBox fx:id="coke" text="Coke"/>
+                  <Label text="Qty"/>
+                  <Slider fx:id="cokeSlider" min="0" max="10" value="0"/>
+               </HBox>
+
+               <HBox spacing="15">
+                  <CheckBox fx:id="sprite" text="Sprite"/>
+                  <Label text="Qty"/>
+                  <Slider fx:id="spriteSlider" min="0" max="10" value="0"/>
+               </HBox>
+
+               <!-- DESSERT -->
+
+               <Separator/>
+
+               <Label text="🍰 Dessert">
+                  <font>
+                     <Font size="22"/>
+                  </font>
+               </Label>
+
+               <HBox spacing="15">
+                  <CheckBox fx:id="iceCream" text="Ice Cream"/>
+                  <Label text="Qty"/>
+                  <Slider fx:id="iceSlider" min="0" max="10" value="0"/>
+               </HBox>
+
+               <Separator/>
+
+               <HBox spacing="20" alignment="CENTER">
+
+                  <Button text="Place Order"
+                          prefWidth="150"
+                          onAction="#placeOrderEvent"/>
+
+                  <Button text="Order History"
+                          prefWidth="150"
+                          onAction="#historyButtonEvent"/>
+
+               </HBox>
+
+            </VBox>
+
+         </content>
+
+      </ScrollPane>
+
+   </center>
+
+</BorderPane>
